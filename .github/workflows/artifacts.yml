@@ -25,5 +25,7 @@ jobs:
     steps:
       - name: downloads artifact 
         uses: actions/download-artifact@v2
+        with:
+          name: songs
       - name: print whats is the text file 
         run: cat songs.txt
