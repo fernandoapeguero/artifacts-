@@ -13,13 +13,13 @@ jobs:
       - name: creates a file name songs.txt
         run: echo "beat it, what about us" > songs.txt
       - name:  uploads artifacts
-        uses: actions/upload-artifact
+        uses: actions/upload-artifact@v2
   downloader:
     name: ubuntu-downloader
     runs-on: ubuntu-latest
     needs: [uploader]
     steps:
       - name: downloads artifact 
-        uses: actions/download-artifact
+        uses: actions/download-artifact@v2
       - name: print whats is the text file 
         run: cat songs.txt
