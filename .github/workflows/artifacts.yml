@@ -19,8 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: [uploader]
     steps:
-      - name: checkout evetything to os 
-        uses: actions/checkout@v2
       - name: downloads artifact 
         uses: actions/download-artifact
       - name: print whats is the text file 
